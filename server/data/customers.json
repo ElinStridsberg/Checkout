@@ -6,5 +6,17 @@
   {
     "email": "b",
     "password": "$2b$10$XOvY06IsfjBQheU6tSDhUez1jxKYE1DrYHNUXlML5f7gE93r2zyFW"
+  },
+  {
+    "email": "c",
+    "password": "$2b$10$HW.H43l/r08.ouu96w9/g.fQuxryt61KVYGzZ0WJl7uLLOedr85A."
+  },
+  {
+    "email": "d",
+    "password": "$2b$10$tH2lr.ut0rRywD1Wx6D65ey.bQddArxpVquSJY1afpP8DyIGLWZXK"
+  },
+  {
+    "email": "e",
+    "password": "$2b$10$X0Spsc/YOPyIKigM4cdrY.pQex8fODAVWrOkLEEPLej8Y3qMjCyZa"
   }
 ]

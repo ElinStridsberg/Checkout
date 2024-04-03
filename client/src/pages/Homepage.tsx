@@ -1,10 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export const Homepage = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [isRegistered, setIsRegistered] = useState<boolean>(false);
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+    const [showForm, setShowForm] = useState<"register" | "login" | "none">("none");
+    const [customer, setCustomer] = useState<string>("");
+
+    useEffect(() => {
+        // Check if user is logged in when component mounts
+        const checkLoginStatus = async () => {
+            const response = await fetch("http://localhost:3001/api/auth/authorize", {
+                credentials: "include"
+            });
+            const data = await response.json();
+            if (response.status === 200) {
+                setIsLoggedIn(true);
+                setEmail(data);
+            }
+        };
+
+        checkLoginStatus();
+    }, []);
 
     const handleRegister = async () => {
         const response = await fetch("http://localhost:3001/api/auth/register", {
@@ -17,6 +35,7 @@ export const Homepage = () => {
         const data = await response.json();
         console.log(data);
         setIsRegistered(true);
+        setShowForm("none");
     };
 
     const handleLogin = async () => {
@@ -32,6 +51,7 @@ export const Homepage = () => {
         console.log(data);
         if (response.status === 200) {
             setIsLoggedIn(true);
+            setEmail(data);
         }
     };
 
@@ -42,31 +62,34 @@ export const Homepage = () => {
         });
         if (response.status === 200) {
             setIsLoggedIn(false);
+            setEmail("");
         }
     };
 
     return (
         <>
-            {!isLoggedIn && (
+            {!isLoggedIn && showForm === "none" && (
                 <>
-                    <button onClick={() => setIsRegistered(true)}>Registrera</button>
-                    <button onClick={() => setIsRegistered(false)}>Logga in</button>
+                    <button onClick={() => setShowForm("register")}>Registrera</button>
+                    <button onClick={() => setShowForm("login")}>Logga in</button>
+                </>
+            )}
 
-                    {!isRegistered ? (
-                        <>
-                            <h2>Logga in</h2>
-                            <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-                            <input type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
-                            <button onClick={handleLogin}>Logga in</button>
-                        </>
-                    ) : (
-                        <>
-                            <h2>Registrera</h2>
-                            <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-                            <input type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
-                            <button onClick={handleRegister}>Registrera</button>
-                        </>
-                    )}
+            {showForm === "register" && (
+                <>
+                    <h2>Registrera</h2>
+                    <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                    <input type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
+                    <button onClick={handleRegister}>Registrera</button>
+                </>
+            )}
+
+            {showForm === "login" && (
+                <>
+                    <h2>Logga in</h2>
+                    <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                    <input type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
+                    <button onClick={handleLogin}>Logga in</button>
                 </>
             )}
 
