@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Login } from './Login';
 
 export const Homepage = () => {
     const [email, setEmail] = useState<string>("");
@@ -6,10 +7,9 @@ export const Homepage = () => {
     const [isRegistered, setIsRegistered] = useState<boolean>(false);
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
     const [showForm, setShowForm] = useState<"register" | "login" | "none">("none");
-    const [customer, setCustomer] = useState<string>("");
+    const [errorMessage, setErrorMessage] = useState<string>("");
 
     useEffect(() => {
-        // Check if user is logged in when component mounts
         const checkLoginStatus = async () => {
             const response = await fetch("http://localhost:3001/api/auth/authorize", {
                 credentials: "include"
@@ -33,7 +33,6 @@ export const Homepage = () => {
             body: JSON.stringify({ email, password })
         });
         const data = await response.json();
-        console.log(data);
         setIsRegistered(true);
         setShowForm("none");
     };
@@ -48,7 +47,12 @@ export const Homepage = () => {
             body: JSON.stringify({ email, password })
         });
         const data = await response.json();
-        console.log(data);
+
+        if (response.status === 400) {
+            setErrorMessage("Wrong email or password");
+            return;
+        }
+
         if (response.status === 200) {
             setIsLoggedIn(true);
             setEmail(data);
@@ -62,6 +66,7 @@ export const Homepage = () => {
         });
         if (response.status === 200) {
             setIsLoggedIn(false);
+            setShowForm("none"); // Återställer till ursprungliga värden
             setEmail("");
         }
     };
@@ -70,26 +75,46 @@ export const Homepage = () => {
         <>
             {!isLoggedIn && showForm === "none" && (
                 <>
-                    <button onClick={() => setShowForm("register")}>Registrera</button>
-                    <button onClick={() => setShowForm("login")}>Logga in</button>
+                <div className='startPage'>
+                    <div className='registerContainer'>
+                        <h3>Ny kund? </h3>
+                        <button onClick={() => setShowForm("register")}>
+                            Registrera
+                        </button>
+                    </div>
+
+                    <div className='loginContainer'>
+                        <h3>Redan användare? Logga in här!</h3>
+                        <button onClick={() => setShowForm("login")}>
+                            Logga in
+                        </button>
+                    </div>
+                </div>
                 </>
             )}
 
             {showForm === "register" && (
                 <>
+                <div className='registerForm'>
                     <h2>Registrera</h2>
                     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
                     <button onClick={handleRegister}>Registrera</button>
+                </div>
                 </>
             )}
 
-            {showForm === "login" && (
+            {showForm === "login" && !isLoggedIn && (
                 <>
+                <div className='loginForm'>
                     <h2>Logga in</h2>
                     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
                     <button onClick={handleLogin}>Logga in</button>
+                    <div>
+                        {errorMessage}
+                    </div>
+                </div>
                 </>
             )}
 

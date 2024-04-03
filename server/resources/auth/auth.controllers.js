@@ -50,7 +50,9 @@ const login = async(req, res) => {
 
     // Kolla så att lösenordet stämmer och att användaren finns
     if (!customerExists || !await bcrypt.compare(password, customerExists.password)){
-        return res.status(400).json("Wrong email or password")
+       
+        return res.status(400).json("Wrong email or password") 
+        
     }
 
     // OM det stämmer vill vi skapa en session

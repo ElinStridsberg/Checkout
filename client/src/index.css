@@ -11,8 +11,41 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
+.startPage{
+  text-align: center;
+  margin-top: 100px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registerContainer, .loginContainer {
+  
+  display: flex;
+  flex-direction: column;
+  background-color: #535bf2;
+  margin-bottom: 50px;
+}
+
+.registerForm{
+  background-color: red;
+}
+
+.loginForm{
+  background-color: palegreen;
+}
+/* .startPageBtns{
+  margin-top: 600px;
+  
+  button {
+    background-color: #dbdbdb;
+    margin: 10px;
+
+  }
+} */
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,6 +56,11 @@ a:hover {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
   margin: 0;
   display: flex;
   place-items: center;
