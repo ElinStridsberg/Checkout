@@ -50,7 +50,9 @@ const login = async(req, res) => {
 
     // Kolla så att lösenordet stämmer och att användaren finns
     if (!customerExists || !await bcrypt.compare(password, customerExists.password)){
-        return res.status(400).json("Wrong email or password")
+       
+        return res.status(400).json("Wrong email or password") 
+        
     }
 
     // OM det stämmer vill vi skapa en session
@@ -65,7 +67,15 @@ const logout = (req, res) => {
     req.session = null
     res.status(200).json("Logged out")
 }
-module.exports = { register, login, logout }
+
+// För att klienten ska kunna anropa för att se om den är inloggad
+const authorize = (req, res) => {
+    if (!req.session.customer) {
+        return res.status(401).json ("You are not logged in")
+    }
+    res.status(200).json(req.session.customer.email)
+}
+module.exports = { register, login, logout, authorize }
 
 
 

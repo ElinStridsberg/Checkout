@@ -18,6 +18,9 @@ Content-Type: application/json
 ###
 POST http://localhost:3001/api/auth/logout
 
+###
+GET  http://localhost:3001/api/auth/authorize
+
 
 
 
