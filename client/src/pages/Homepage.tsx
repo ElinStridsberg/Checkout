@@ -1,83 +1,81 @@
-import { useEffect, useState } from "react"
+import React, { useState } from 'react';
 
 export const Homepage = () => {
-    const [customer, setCustomer] = useState<string>("")
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [isRegistered, setIsRegistered] = useState<boolean>(false);
+    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
-    useEffect(() => {
-        const authorize = async () => {
-            const response = await fetch("http://localhost:3001/api/auth/authorize", {
-                credentials: "include"
-     
-             }) 
-             const data = await response.json()
-             if (response.status === 200) {
-                setCustomer(data)
-             } else {
-                setCustomer("")
-             }
-        }
-        authorize()
-    }, [])
-    const register = async() => {
+    const handleRegister = async () => {
         const response = await fetch("http://localhost:3001/api/auth/register", {
-           method:  "POST",
-           headers: {
-            "Content-Type" : "application/json"
-           },
-           body: JSON.stringify({email: "abc.com@jdw", password: "56789"})
-        }) 
-
-        const data = await response.json()
-        console.log(data)
-    }
-       // vi gör en knapp til vår funktion. Den gör ett anrop till vår server och skickar med data.
-    
-    const login = async () => {
-        const response = await fetch("http://localhost:3001/api/auth/login", {
-            method:  "POST",
+            method: "POST",
             headers: {
-             "Content-Type" : "application/json"
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+        });
+        const data = await response.json();
+        console.log(data);
+        setIsRegistered(true);
+    };
+
+    const handleLogin = async () => {
+        const response = await fetch("http://localhost:3001/api/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
             },
             credentials: "include",
-            body: JSON.stringify({email: "abc.com@jdw", password: "56789"})
-           
-         }) 
-         const data = await response.json()
-         if (response.status === 200) {
-            setCustomer(data)
-         } else {
-            setCustomer("")
-         }
-     }
-    const logout = async () => {
-    const response = await fetch("http://localhost:3001/api/auth/logout", {
-           method:  "POST",
-            credentials: "include"          
-        }) 
-
-        if( response.status === 200) {
-            setCustomer("")
+            body: JSON.stringify({ email, password })
+        });
+        const data = await response.json();
+        console.log(data);
+        if (response.status === 200) {
+            setIsLoggedIn(true);
         }
-    }
-       return (
-        <>       
-            <h1>{customer ? "inloggad som: " + customer : "Utloggad"}</h1>
-         
-            <button onClick={register}> Registrera </button>
-            <button onClick={login}> Logga in </button>
-            <button onClick={logout}> Logga ut </button>
-     
-        {/* <div className="homeContainer">
-                <h1>HomePage</h1>
-            <div className="buttonContainer">
-            <Link to="/login">
-                <button>Login</button>
-            </Link>
-            <Link to="/register">
-                <button>Register</button>
-            </Link>
-           </div> 
-        </div> */}
+    };
+
+    const handleLogout = async () => {
+        const response = await fetch("http://localhost:3001/api/auth/logout", {
+            method: "POST",
+            credentials: "include"
+        });
+        if (response.status === 200) {
+            setIsLoggedIn(false);
+        }
+    };
+
+    return (
+        <>
+            {!isLoggedIn && (
+                <>
+                    <button onClick={() => setIsRegistered(true)}>Registrera</button>
+                    <button onClick={() => setIsRegistered(false)}>Logga in</button>
+
+                    {!isRegistered ? (
+                        <>
+                            <h2>Logga in</h2>
+                            <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                            <input type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
+                            <button onClick={handleLogin}>Logga in</button>
+                        </>
+                    ) : (
+                        <>
+                            <h2>Registrera</h2>
+                            <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                            <input type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
+                            <button onClick={handleRegister}>Registrera</button>
+                        </>
+                    )}
+                </>
+            )}
+
+            {isLoggedIn && (
+                <>
+                    <h1>Inloggad som: {email}</h1>
+                    <button onClick={handleLogout}>Logga ut</button>
+                </>
+            )}
         </>
-    )
-}
+    );
+};
