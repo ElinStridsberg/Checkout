@@ -65,7 +65,15 @@ const logout = (req, res) => {
     req.session = null
     res.status(200).json("Logged out")
 }
-module.exports = { register, login, logout }
+
+// För att klienten ska kunna anropa för att se om den är inloggad
+const authorize = (req, res) => {
+    if (!req.session.customer) {
+        return res.status(401).json ("You are not logged in")
+    }
+    res.status(200).json(req.session.customer.email)
+}
+module.exports = { register, login, logout, authorize }
 
 
 
