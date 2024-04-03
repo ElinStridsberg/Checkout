@@ -1,14 +1,19 @@
 const express = require("express")
+const cookieSession = require("cookie-session")
 
-const costumerRouter = require("./resources/customers/customers.router")
+const customerRouter = require("./resources/customers/customers.router")
 const authRouter = require("./resources/auth/auth.router")
 const app = express()
 
 app.use(express.json())
+app.use(cookieSession({
+    secret: "s3cr3tk3y",
+    maxAge: 1000 * 60 * 60 * 24, // 1dygn
+}))
 //Routes
-
 //Endpoint för att hämta alla användare
-app.use("/api/customers", costumerRouter)
+app.use("/api/customers", customerRouter);
+
 //Endpoit för .. Alla anrop som kommer in på /api/auth kommer in i auth.router.js. Går igenom post/register och sen i register funktionen som ligger i auth.controller.js och kör koden där
 app.use("/api/auth", authRouter)
 
