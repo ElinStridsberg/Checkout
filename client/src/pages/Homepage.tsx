@@ -96,7 +96,7 @@ export const Homepage = () => {
             {showForm === "register" && (
                 <>
                 <div className='registerForm'>
-                    <h2>Registrera</h2>
+                    <h2>Registrera ny användare</h2>
                     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     <input type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
                     <button onClick={handleRegister}>Registrera</button>
@@ -120,8 +120,12 @@ export const Homepage = () => {
 
             {isLoggedIn && (
                 <>
-                    <h1>Inloggad som: {email}</h1>
+                    <div className='loggedInAs'>
+                        <p>Inloggad som: {email}</p>
+
                     <button onClick={handleLogout}>Logga ut</button>
+                    </div>
+                    <h3>WEBBSHOP</h3>
                 </>
             )}
         </>

@@ -34,5 +34,13 @@
   {
     "email": "hoho",
     "password": "$2b$10$UCBLhVglS8PIJESazhJt/OZNAWJVxmxpYmCyN1YFDLIRr9SHXQVpC"
+  },
+  {
+    "email": "jjjj",
+    "password": "$2b$10$pYx5ijMW9wbrf44Db/O4XeKc/q3X9f2rShR7.Ic1OwttRi4AYumca"
+  },
+  {
+    "email": "00",
+    "password": "$2b$10$L/1tDjfkW9VkwuNWorzDe.dc0YhyyuJpT95EKLeEAr8OSFgu2XIhG"
   }
 ]
