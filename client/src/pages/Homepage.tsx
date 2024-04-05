@@ -74,7 +74,6 @@ export const Homepage = () => {
 
     return (
         <>
-        {/* <Payment /> */}
             {!isLoggedIn && showForm === "none" && (
                 <>
                 <div className='startPage'>
