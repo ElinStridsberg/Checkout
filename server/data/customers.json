@@ -42,5 +42,17 @@
   {
     "email": "00",
     "password": "$2b$10$L/1tDjfkW9VkwuNWorzDe.dc0YhyyuJpT95EKLeEAr8OSFgu2XIhG"
+  },
+  {
+    "email": "aa",
+    "password": "$2b$10$zgXVoR38hsEKs81IRtv/0eUrksSQaplAw7kUeHeq7dOJ7fFt2tv5q"
+  },
+  {
+    "email": "HEJHEJ",
+    "password": "$2b$10$H9ed3j74ICi3ZN4BHy9evegqBXNx.lGg7y0SwJCEjKznglHu/fkae"
+  },
+  {
+    "email": "1111",
+    "password": "$2b$10$5O2FFXlesJL7KJqpOCrRh.yuWzEs/jXM9FHVvPG1/5hl89NKvAzH6"
   }
 ]

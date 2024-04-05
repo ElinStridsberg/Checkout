@@ -4,6 +4,7 @@ import { Homepage } from "./pages/Homepage";
 // import { NotFound } from "./pages/NotFound";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
+import { Confirmation } from "./pages/Confirmation";
 
 export const router = createBrowserRouter([
 
@@ -21,12 +22,8 @@ export const router = createBrowserRouter([
             index: true,
           },
           {
-            path: "/login",
-            element: <Login />,
-          },
-          {
-            path: "/register",
-            element: <Register />,
+            path: "/confirmation",
+            element: <Confirmation />
           }
          
         ]

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Login } from './Login';
+import { Payment } from './Payment';
+import { Webshop } from './Webshop';
 
 export const Homepage = () => {
     const [email, setEmail] = useState<string>("");
@@ -73,6 +74,7 @@ export const Homepage = () => {
 
     return (
         <>
+        {/* <Payment /> */}
             {!isLoggedIn && showForm === "none" && (
                 <>
                 <div className='startPage'>
@@ -120,12 +122,13 @@ export const Homepage = () => {
 
             {isLoggedIn && (
                 <>
+                <Webshop />
                     <div className='loggedInAs'>
                         <p>Inloggad som: {email}</p>
 
                     <button onClick={handleLogout}>Logga ut</button>
                     </div>
-                    <h3>WEBBSHOP</h3>
+                
                 </>
             )}
         </>
