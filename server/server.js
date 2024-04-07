@@ -6,7 +6,8 @@ require("dotenv").config()
 const customerRouter = require("./resources/customers/customers.router")
 const authRouter = require("./resources/auth/auth.router")
 const stripeRouter = require("./stripe/stripe.router")
-
+const stripe = require("stripe")
+const { fetchProducts } = require("./stripe/stripe.controller")
 const app = express()
 
 app.use(cors({
@@ -28,6 +29,10 @@ app.use("/api/auth", authRouter)
 
 app.use("/payments", stripeRouter)
 
+app.use("/products", fetchProducts);  // Använd fetchProducts här
+
+
+// app.use ("/fetch-products", stripeRouter)
 app.listen(3001, () => console.log("Server is up and running...."))
 
 

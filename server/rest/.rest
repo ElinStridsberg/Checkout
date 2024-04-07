@@ -1,1 +1,1 @@
-POST http://localhost:3001/payments/create-checkout-session
+GET http:/localhost:3001/api/get-products

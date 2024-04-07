@@ -24,6 +24,9 @@ export const router = createBrowserRouter([
           {
             path: "/confirmation",
             element: <Confirmation />
+          },
+          {
+            
           }
          
         ]
