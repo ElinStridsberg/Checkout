@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -12,6 +12,29 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#root{
+  
+  display: flex;
+
+  width: 100%;
+  min-height: 500px;
 }
 
 .startPage{
@@ -123,4 +146,25 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.ProductList{
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+}
+ul {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);  */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 30px;
+  width: 20%;
+}
+
+.ProductImg{
+  width: 100px;
 }
