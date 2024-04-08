@@ -60,18 +60,23 @@ body {
 .loggedInAs {
   display: flex;
   width: 70%;
-  text-align: center;
+  justify-content: space-between; /* Separerar innehållet på båda sidor */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  text-align: left; /* Texten till vänster */
   margin-top: 30px;
   font-size: larger;
 }
-.loggedInAs button{
+
+.loggedInAs span {
+  margin-right: auto; /* Texten till vänster */
+}
+
+.loggedInAs button {
   width: 70px;
-  position: absolute;
-  top: 27px;
-  right: 400px;
-  align-items: center;
   padding: 4px;
 }
+
+
 h1{
   margin-bottom: 50px;
   margin-top: 80px;
@@ -84,7 +89,7 @@ h1{
   gap: 20px;
   justify-content: center;
   align-content: center;
-  width: 100%;
+  width: 80%;
   margin: auto;
   margin-bottom: 50px;
   text-align: center;
@@ -105,8 +110,7 @@ h1{
   padding: 10px;
   position: relative;
   list-style-type: none;
-  border: 1px solid rgb(211, 209, 209);
-  border-radius: 10px;
+  border: 1px solid rgb(232, 231, 231);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
   display: flex;
@@ -146,6 +150,8 @@ h1{
 }
 
 .addToCart{
-  background-color: aquamarine;
-  padding: 4px;
+  width: 150px;
+  align-self: center;
+  padding: 5px;
+  margin-top: 20px;
 }

@@ -123,7 +123,7 @@ export const Homepage = () => {
                 <>
              
                     <div className='loggedInAs'>
-                        <p>Inloggad som: {email}</p>
+                        <p><b>Inloggad som:</b> {email}</p>
 
                     <button onClick={handleLogout}>Logga ut</button>
                     </div>   
