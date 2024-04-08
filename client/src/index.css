@@ -88,9 +88,11 @@ h1{
   margin: auto;
   margin-bottom: 50px;
   text-align: center;
+
 }
 
 .ProductList ul {
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto 1fr;
@@ -100,6 +102,7 @@ h1{
 }
 
 .ProductList li {
+  padding: 10px;
   position: relative;
   list-style-type: none;
   border: 1px solid rgb(211, 209, 209);
@@ -124,6 +127,7 @@ h1{
 .ProductName {
   font-size: large;
   font-weight: bold;
+
 }
 
 .ProductList p{
@@ -137,6 +141,11 @@ h1{
 .ProductImg {
   margin-top: 10px;
   margin-bottom: 20px;
-  width: 100px;
+  width: 150px;
   align-self: center;
+}
+
+.addToCart{
+  background-color: aquamarine;
+  padding: 4px;
 }

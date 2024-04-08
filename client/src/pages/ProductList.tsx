@@ -31,9 +31,10 @@ const ProductList: React.FC = () => {
                 {products.map(product => (
                     <li key={product.id}>
                         <h5>{product.name}</h5>
-                        <p>{product.description}</p>
+                       
                         <p>Price: {product.price}</p>
                         <img src={product.images} className='ProductImg'/>
+                        <button className='addToCart'>Lägg till i varukorg</button>
                     </li>
                 ))}
                 </div>
