@@ -1,170 +1,142 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-} */
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* body {
-
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-#root{
-  
-  display: flex;
-
+body {
   width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
   min-height: 500px;
 }
 
-.startPage{
+.startPage {
   text-align: center;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .registerContainer, .loginContainer {
-  
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
 }
 
-.registerForm, .loginForm{
-display: flex;
-flex-direction: column;
-align-items: center;
-
-input{
-  margin-top: 10px;
-  width: 200px;
-  border-radius: 10px;
-  padding: 5px;
-}
-button{
- width: 150px;
- align-self: center;
- padding: 5px;
- margin-top: 20px;
- background-color: #535bf2;
-  
-}
-}
-
-
-.loginForm{
-}
-
-.loggedInAs{
-  display: flex;
-  
-}
-/* .startPageBtns{
-  margin-top: 600px;
-  
-  button {
-    background-color: #dbdbdb;
-    margin: 10px;
-
-  }
-} */
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+.registerForm, .loginForm {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  input {
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 5px;
   }
-  a:hover {
-    color: #747bff;
-  }
+
   button {
-    background-color: #f9f9f9;
+    width: 150px;
+    align-self: center;
+    padding: 5px;
+    margin-top: 20px;
   }
 }
-.ProductList{
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+.loggedInAs {
+  display: flex;
+  width: 70%;
+  text-align: center;
+  margin-top: 30px;
+  font-size: larger;
 }
-ul {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);  */
+.loggedInAs button{
+  width: 70px;
+  position: absolute;
+  top: 27px;
+  right: 400px;
+  align-items: center;
+  padding: 4px;
+}
+h1{
+  margin-bottom: 50px;
+  margin-top: 80px;
+  text-align: center;
+}
+.ProductList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.ProductList ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-li {
-  margin-top: 30px;
-  width: 20%;
+.ProductList li {
+  position: relative;
+  list-style-type: none;
+  border: 1px solid rgb(211, 209, 209);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Placerar knappen längst ner */
+  align-items: center; /* Centrerar knappen horisontellt */
 }
 
-.ProductImg{
+.ProductList li:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.ProductList button {
+  margin: 4px;
+  padding: 4px;
+}
+
+.ProductName {
+  font-size: large;
+  font-weight: bold;
+}
+
+.ProductList p{
+  font-size: 10px;
+}
+/* .ProductList li {
+  margin-top: 30px;
+  width: 20%;
+} */
+
+.ProductImg {
+  margin-top: 10px;
+  margin-bottom: 20px;
   width: 100px;
+  align-self: center;
 }

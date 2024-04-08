@@ -30,7 +30,7 @@ const ProductList: React.FC = () => {
                 <div className='ProductList'>
                 {products.map(product => (
                     <li key={product.id}>
-                        <h3>{product.name}</h3>
+                        <h5>{product.name}</h5>
                         <p>{product.description}</p>
                         <p>Price: {product.price}</p>
                         <img src={product.images} className='ProductImg'/>
