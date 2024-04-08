@@ -62,5 +62,13 @@
   {
     "email": "666",
     "password": "$2b$10$AK7T/yqonH1Gmj33H5y7kuzXxqJ0KwALcd9YhQOyi3Oba/l0IHE3G"
+  },
+  {
+    "email": "hello",
+    "password": "$2b$10$vKGCLYL/UqXMtUOc64p3leESHFdy8DwoqY23es5I.nTSMly6mEGpi"
+  },
+  {
+    "email": "99",
+    "password": "$2b$10$A57rIdomDxxJ9qx7q9nfBeHB6HsyEFBVpm.wrZzTH1FSZyS/IUthO"
   }
 ]

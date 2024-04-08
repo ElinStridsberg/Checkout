@@ -1,14 +1,11 @@
-import './App.css'
-import { Homepage } from './pages/Homepage'
+import Header from "./pages/Header"
+import ProductList from "./pages/ProductList"
+// import CartProvider from "./contexts/CartContext"
 
-function App() {
+const App = () => (
+  
+    <><ProductList /><Header /></>
 
-  return (
-    <>
-    
-   <Homepage />
-    </>
-  )
-}
+)
 
 export default App

@@ -3,7 +3,7 @@ import { Homepage } from "./pages/Homepage";
 // import { Layout } from "./pages/Layout";
 // import { NotFound } from "./pages/NotFound";
 import { Login } from "./pages/Login";
-import { Register } from "./pages/Register";
+import { Register } from "./pages/Header";
 import { Confirmation } from "./pages/Confirmation";
 
 export const router = createBrowserRouter([

@@ -1,46 +1,41 @@
 import React, { useState, useEffect } from 'react';
+import Header from './Header';
 
-interface Product {
-    id: string;
-    name: string;
-    description: string;
-    price: number;
-    // Lägg till andra egenskaper om det finns några
-}
+const ProductList = () => {
+    const [products, setProducts] = useState<Product[]>()
 
-const ProductList: React.FC = () => {
-    const [products, setProducts] = useState<Product[]>([]);
-
+   
     useEffect(() => {
-        fetch("http://localhost:3001/products")
-            .then(response => response.json())
-            .then((data: Product[]) => {
-                console.log("Received products:", data); // Lägg till denna logg
-                setProducts(data);
-            })
-            .catch(error => console.error("Error fetching products:", error));
-    }, []);
+        const fetchProducts = async () => {
+            const response = await fetch("http://localhost:3001/products")
+            const product = await response.json()
+            console.log(product.data)
+            setProducts(product.data)
+        }
+        fetchProducts()
+    }, [])
 
-    console.log("Rendering with products:", products); // Lägg till denna logg
+    
 
     return (
+    <>
+        <Header />
         <div>
-            <h1>Products</h1>
-            <ul>
-                <div className='ProductList'>
-                {products.map(product => (
-                    <li key={product.id}>
-                        <h5>{product.name}</h5>
-                       
-                        <p>Price: {product.price}</p>
-                        <img src={product.images} className='ProductImg'/>
-                        <button className='addToCart'>Lägg till i varukorg</button>
-                    </li>
-                ))}
+            {products?.map((product: Product) => (
+                <div key={product.id}>
+                    <img src={product.images} className='ProductImg'/>
+                    <h3>{product.name}</h3>
+                    <p>{product.default_price.unit_amount / 100} kr</p>
+                    <button>Lägg till i kundvagn</button>
                 </div>
-            </ul>
+            ))}
         </div>
-    );
+    </>
+    )
 }
 
-export default ProductList;
+export default ProductList
+
+function useCart(): { addToCart: any; } {
+    throw new Error('Function not implemented.');
+}
