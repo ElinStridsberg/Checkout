@@ -1,21 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Homepage } from "./pages/Homepage";
-// import { Layout } from "./pages/Layout";
-// import { NotFound } from "./pages/NotFound";
-import { Login } from "./pages/Login";
-import { Register } from "./pages/Header";
 import { Confirmation } from "./pages/Confirmation";
+import Cart from "./components/Cart";
+
 
 export const router = createBrowserRouter([
 
-    // TODO: 
-    // 
-    // Vilka sidor kommer att behövas
-    // {
-    //     path: "/",
-    //     element: <Layout />,
-    //     errorElement: <NotFound />,
-    //     children: [
           {
             path: "/",
             element: <Homepage />,
@@ -26,6 +16,8 @@ export const router = createBrowserRouter([
             element: <Confirmation />
           },
           {
+            path: "/cart",
+            element: <Cart />
             
           }
          

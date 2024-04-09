@@ -93,5 +93,10 @@
     "customerId": "cus_PtNV1S488jBiSD",
     "email": "elin@elin.com",
     "password": "$2b$10$xTElI2erCovrJQdhskaVPuEZXOF7BizCBA3QPbkeIuFl10v0rYXW2"
+  },
+  {
+    "customerId": "cus_PtNsCxIamyxmef",
+    "email": "a@a.a",
+    "password": "$2b$10$TFFS7gIN0JETKnoRb3tZm.lwy5HAmbgqVXEp2KxZ6MJfgDQLnxlMO"
   }
 ]

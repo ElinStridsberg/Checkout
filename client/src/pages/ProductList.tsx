@@ -20,14 +20,14 @@ const ProductList = () => {
     return (
         <>
         <Header />
-        <Payment />
-            <div>
+     
+            <div className='ProductContent'>
                 {products?.map((product: Product) => (
-                    <div key={product.id}>
+                    <div key={product.id} className='list'>
                         <img src={product.images} className='ProductImg'/>
-                        <h3>{product.name}</h3>
+                        <h5>{product.name}</h5>
                         <p>{product.default_price.unit_amount / 100} kr</p>
-                        <button onClick={() => addToCart(product)}>Lägg till i kundvagn</button>
+                        <button onClick={() => addToCart(product)} className='Buy'>Köp</button>
                     </div>
                 ))}
             </div>
