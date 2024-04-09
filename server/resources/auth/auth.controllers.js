@@ -1,11 +1,11 @@
+const initStripe = require("../../stripe")
 const fetchCustomers = require("../../utils/fetchCustomers")
 const bcrypt = require("bcrypt")
 const fs = require("fs").promises
 
 const register = async (req, res) => {
-    console.log("yes")
 
-    const { email, password } = req.body
+    const { email, password, name } = req.body
     // // Kolla så att inte användaren finns. 
     // //För att göra det måste vi plocka ut alla användare från vår datababs (json-fil)
   
@@ -20,8 +20,22 @@ const register = async (req, res) => {
     // // Kryptera lösenordet. Vi tar lösenordet som användare har skickat in och krypterar det. För att kryptera lösenordet använder vi packetet bcrypt.
     const hashedPassword = await bcrypt.hash(password, 10)
 
+    //den informationen vi skickar in till Stripe 
+    const stripeCustomer = {
+        // name,
+        email
+    }
+
+    const stripe = initStripe()
+    const addStripeCustomer = await stripe.customers.create({
+        // name: stripeCustomer.name,
+        email: stripeCustomer.email,
+      });
+
+      const customerId = addStripeCustomer.id
     // Sparar till databasen (json fil). Nedan ett exempel. Denna data ska komm från klienten
     const newCustomer = {
+        customerId,
         email,
         password: hashedPassword
     }

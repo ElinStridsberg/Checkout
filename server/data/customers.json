@@ -74,5 +74,14 @@
   {
     "email": "AA",
     "password": "$2b$10$Yqkqzw1VTf5uuxnHnzXQuuUrA8/IozhgwGrqiHo8OgHt7mRcDDrC6"
+  },
+  {
+    "email": "elin@idhieji.com",
+    "password": "$2b$10$Fi/wAo8j.Sbum.e6oE1AceGGXNIfBIQb6TQH4498ZsLCLQdDN.qvG"
+  },
+  {
+    "customerId": "cus_PtNLCIkIifoBXz",
+    "email": "Alinde@gmail.com",
+    "password": "$2b$10$BU2TmTEJRwGDtoVBlH42S.egIk2PfAwWq1mBZ5LOSrv7O398tAzLa"
   }
 ]

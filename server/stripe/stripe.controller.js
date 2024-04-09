@@ -19,26 +19,4 @@ const createCheckoutSession = async (req, res) => {
     res.status(200).json({ url: session.url });
 };
 
-// const fetchProducts = async (req, res) => {
-//     app.get("/products", async (req, res) => {
-//         const products = await stripe.products.list ({
-//             expand: ["data-default_price"]
-//         });
-//         res.status(200).json(products)
-    
-//     });
-    // try {
-    //     const stripe = initStripe; // Lägg till din Stripe API-nyckel här
-
-    //     const products = await stripe.products.list({
-    //         expand: ["data.default_price"]
-    //     });
-
-    //     res.status(200).json(products);
-    // } catch (error) {
-    //     console.error('Ett fel uppstod:', error);
-    //     res.status(500).json({ error: 'unable to fetch products' });
-//     // }
-// };
-
 module.exports = { createCheckoutSession };
