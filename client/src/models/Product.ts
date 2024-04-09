@@ -1,4 +1,5 @@
 type Product = {
+    default_price: any;
     id: string;
     name: string;
     description: string;

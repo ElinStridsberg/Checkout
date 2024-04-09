@@ -1,62 +1,64 @@
-// import { PropsWithChildren, createContext, useContext, useEffect, useState } from "react"
-// import React from 'react';
+import React, { useState, useEffect, PropsWithChildren, createContext, useContext } from 'react';
 
 export interface Product {
     id: string,
     name: string,
     description: string,
-    images: string[]
+    images?: string[],  // Gör images till en valfri array av strängar
     default_price: {
         unit_amount: number
     }
 }
 
-// interface CartItem {
-//     product: Product,
-//     quantity: number
-// }
 
-// interface ICartContext {
-//     cart: CartItem[],
-//     addToCart: (product: Product) => void
-// }
+export interface CartItem {
+    product: Product,
+    quantity: number
+}
 
-// const initalValues = {
-//     cart: [],
-//     addToCart: () => { }
-// }
+interface ICartContext {
+    cart: CartItem[],
+    addToCart: (product: Product) => void
+}
 
-// const CartContext = createContext<ICartContext>(initalValues)
-// export const useCart = () => useContext(CartContext)
+const initialValues = {
+    cart: [],
+    addToCart: () => { }
+}
 
-// const CartProvider = ({ children }: PropsWithChildren) => {
-//     const [cart, setCart] = useState<CartItem[]>(() => {
-//         const lsData = localStorage.getItem("cart")
-//         return lsData ? JSON.parse(lsData) : []
-//     })
+const CartContext = createContext<ICartContext>(initialValues)
+export const useCart = () => useContext(CartContext)
 
-//     useEffect(() => {
-//         localStorage.setItem("cart", JSON.stringify(cart))
-//     }, [cart])
+const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
+    const [cart, setCart] = useState<CartItem[]>(() => {
+        const lsData = localStorage.getItem("cart")
+        return lsData ? JSON.parse(lsData) : []
+    })
 
-//     const addToCart = (product: Product) => {
-//         const clonedCart = [...cart]
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart))
+    }, [cart])
 
-//         const productAlreadyExists = clonedCart.find(item => item.product.id === product.id)
+    const addToCart = (product: Product) => {
+        console.log('Added to cart:', product.name); // Loggar den valda produkten
+        const productAlreadyExists = cart.find(item => item.product.id === product.id);
+    
+        if (productAlreadyExists) {
+            setCart(prevCart => 
+                prevCart.map(item =>
+                    item.product.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+                )
+            );
+        } else {
+            setCart([...cart, { product, quantity: 1 }]);
+        }
+    };
 
-//         if (productAlreadyExists) {
-//             productAlreadyExists.quantity++
-//             setCart(clonedCart)
-//         } else {
-//             setCart([...cart, { product, quantity: 1 }])
-//         }
-//     }
+    return (
+        <CartContext.Provider value={{ cart, addToCart }}>
+            {children}
+        </CartContext.Provider>
+    )
+}
 
-//     return (
-//         <CartContext.Provider value={{ cart, addToCart }}>
-//             {children}
-//         </CartContext.Provider>
-//     )
-// }
-
-// export default CartProvider
+export default CartProvider;
