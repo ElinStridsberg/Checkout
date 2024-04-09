@@ -5,6 +5,7 @@ const createCheckoutSession = async (req, res) => {
     const stripe = initStripe(process.env.STRIPE_SECRET_KEY); // Lägg till din Stripe API-nyckel här
 
     const session = await stripe.checkout.sessions.create({
+        customer: req.session.customer.customerId,
         mode: "payment",
         line_items: cart.map(item => {
             return {
@@ -15,7 +16,7 @@ const createCheckoutSession = async (req, res) => {
         success_url: "http://localhost:5173/confirmation",
         cancel_url: "http://localhost:5173",
     });
-
+   
     res.status(200).json({ url: session.url });
 };
 

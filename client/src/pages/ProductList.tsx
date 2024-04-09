@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Product, useCart } from "../contexts/CartContext"
 import Header from '../pages/Header';
+import { Payment } from './Payment';
 
 const ProductList = () => {
     const [products, setProducts] = useState<Product[]>()
@@ -19,6 +20,7 @@ const ProductList = () => {
     return (
         <>
         <Header />
+        <Payment />
             <div>
                 {products?.map((product: Product) => (
                     <div key={product.id}>

@@ -83,5 +83,15 @@
     "customerId": "cus_PtNLCIkIifoBXz",
     "email": "Alinde@gmail.com",
     "password": "$2b$10$BU2TmTEJRwGDtoVBlH42S.egIk2PfAwWq1mBZ5LOSrv7O398tAzLa"
+  },
+  {
+    "customerId": "cus_PtNUl056j47UNm",
+    "email": "Elin@12.com",
+    "password": "$2b$10$nWFK6ZXOW3EEKB.QazaN9eR2Q1NxLlozzUxfSzlpPDBesWUj/nR/6"
+  },
+  {
+    "customerId": "cus_PtNV1S488jBiSD",
+    "email": "elin@elin.com",
+    "password": "$2b$10$xTElI2erCovrJQdhskaVPuEZXOF7BizCBA3QPbkeIuFl10v0rYXW2"
   }
 ]
