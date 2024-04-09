@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Payment } from './Payment';
 import ProductList from './ProductList';
+import Header from './Header';
 
 export const Homepage = () => {
     const [email, setEmail] = useState<string>("");
@@ -127,6 +128,7 @@ export const Homepage = () => {
 
                     <button onClick={handleLogout}>Logga ut</button>
                     </div>   
+                  
                     <ProductList />
                 
                 </>

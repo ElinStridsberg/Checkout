@@ -4,12 +4,11 @@ export interface Product {
     id: string,
     name: string,
     description: string,
-    images?: string[],  // Gör images till en valfri array av strängar
+    images: string[],  
     default_price: {
         unit_amount: number
     }
 }
-
 
 export interface CartItem {
     product: Product,

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useCart } from '../contexts/CartContext';
+import { Product, useCart } from "../contexts/CartContext"
 import Header from '../pages/Header';
 
 const ProductList = () => {
@@ -15,10 +15,6 @@ const ProductList = () => {
         fetchProducts()
     }, [])
 
-    const handleAddToCart = (product: Product) => {
-        console.log(product); // Visa produkten i konsolen
-        addToCart(product);
-    }
 
     return (
         <>
@@ -29,7 +25,7 @@ const ProductList = () => {
                         <img src={product.images} className='ProductImg'/>
                         <h3>{product.name}</h3>
                         <p>{product.default_price.unit_amount / 100} kr</p>
-                        <button onClick={() => handleAddToCart(product)}>Lägg till i kundvagn</button>
+                        <button onClick={() => addToCart(product)}>Lägg till i kundvagn</button>
                     </div>
                 ))}
             </div>
