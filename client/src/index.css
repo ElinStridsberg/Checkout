@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(242, 242, 236);
+  
 }
 
 body {
@@ -12,6 +14,9 @@ body {
   align-items: center;  
   min-width: 320px;
   min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+
 }
 
 #root {
@@ -22,7 +27,24 @@ body {
   width: 60%;
   min-height: 500px;
 }
+.headingContent{
 
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.heading{
+  font-family: "Syncopate", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.logo{
+  height: 100px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
 .startPage {
   text-align: center;
   margin-top: 100px;
@@ -58,15 +80,19 @@ body {
 }
 
 .loggedInAs {
+  /* background-color: rgb(242, 242, 236); */
+  padding: 20px;
   display: flex;
-  width: 70%;
+  width: 100%;
   justify-content: space-between; /* Separerar innehållet på båda sidor */
   align-items: center; /* Centrerar innehållet vertikalt */
   text-align: left; /* Texten till vänster */
   margin-top: 30px;
   font-size: larger;
 }
-
+.customerName{
+  background-color: rgb(242, 242, 236);
+}
 .loggedInAs span {
   margin-right: auto; /* Texten till vänster */
 }
@@ -83,19 +109,20 @@ h1{
   text-align: center;
 }
 .ProductContent{
+
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 7px;
-  width: 70%;
+  width: 50%;
   justify-content: center; 
   align-content: center;
-  margin-top: 100px;
+  margin-top: 10px;
   margin-bottom: 100px;
-  
   
 }
 
 .ProductList ul {
+  background-color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto 1fr;
@@ -104,6 +131,10 @@ h1{
   list-style-type: none;
   justify-content: center;
   align-content: center; 
+}
+
+.ProductList li{
+  background-color: white;
 }
 
 .Buy{
@@ -115,9 +146,11 @@ h1{
 }
 
 .list{
+  background-color: white;
+
+  padding: 20px;
   position: relative;
   list-style-type: none;
-  border: 1px solid rgb(211, 209, 209);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
   display: flex;
@@ -129,19 +162,25 @@ h1{
 
 } 
 
-
+.list h5, p{
+  background-color: white;
+}
 .list button {
   margin: 4px;
   padding: 4px;
 }
 
 .ProductName {
+  /* background-color: white; */
+
   font-size: large;
   font-weight: bold;
   text-align: left;
 }
 
 .ProductList p{
+  /* background-color: white; */
+
   font-size: 10px;
   text-align: left;
 }
@@ -185,8 +224,8 @@ h1{
 .cart a{
   color: rgb(62, 62, 62);
   position: absolute;
-  top: 90px;
-  right: 470px;
+  top: 40px;
+  right: 370px;
 }
 
 .cart svg {
