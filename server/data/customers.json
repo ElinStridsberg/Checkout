@@ -98,5 +98,15 @@
     "customerId": "cus_PtNsCxIamyxmef",
     "email": "a@a.a",
     "password": "$2b$10$TFFS7gIN0JETKnoRb3tZm.lwy5HAmbgqVXEp2KxZ6MJfgDQLnxlMO"
+  },
+  {
+    "customerId": "cus_PtSOdNYXpwTSOr",
+    "email": "3@3.3",
+    "password": "$2b$10$1542YCPzmmT0x3rQYtmcPObVpqe8B0K93rbtq96esCLSptOrQtCFK"
+  },
+  {
+    "customerId": "cus_PthAK0yZCfT7IW",
+    "email": "8@8.8",
+    "password": "$2b$10$x4RJmcsusJV.0L5pn1hYqetgPPJYDFgKel4NmQqXMY8TeT2i2mv1C"
   }
 ]
