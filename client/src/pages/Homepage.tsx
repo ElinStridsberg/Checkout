@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Login } from './Login';
+import { Payment } from './Payment';
+import ProductList from './ProductList';
+import Header from './Header';
 
 export const Homepage = () => {
     const [email, setEmail] = useState<string>("");
@@ -120,12 +122,15 @@ export const Homepage = () => {
 
             {isLoggedIn && (
                 <>
+             
                     <div className='loggedInAs'>
-                        <p>Inloggad som: {email}</p>
+                        <p><b>Inloggad som:</b> {email}</p>
 
                     <button onClick={handleLogout}>Logga ut</button>
-                    </div>
-                    <h3>WEBBSHOP</h3>
+                    </div>   
+                  
+                    <ProductList />
+                
                 </>
             )}
         </>

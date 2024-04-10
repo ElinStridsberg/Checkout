@@ -42,5 +42,71 @@
   {
     "email": "00",
     "password": "$2b$10$L/1tDjfkW9VkwuNWorzDe.dc0YhyyuJpT95EKLeEAr8OSFgu2XIhG"
+  },
+  {
+    "email": "aa",
+    "password": "$2b$10$zgXVoR38hsEKs81IRtv/0eUrksSQaplAw7kUeHeq7dOJ7fFt2tv5q"
+  },
+  {
+    "email": "HEJHEJ",
+    "password": "$2b$10$H9ed3j74ICi3ZN4BHy9evegqBXNx.lGg7y0SwJCEjKznglHu/fkae"
+  },
+  {
+    "email": "1111",
+    "password": "$2b$10$5O2FFXlesJL7KJqpOCrRh.yuWzEs/jXM9FHVvPG1/5hl89NKvAzH6"
+  },
+  {
+    "email": "333",
+    "password": "$2b$10$wxWDH/2U/Gpsfj4CWmO8tOCT1wLX5mhuXRpXdiJgPJTwnNlaJA/eq"
+  },
+  {
+    "email": "666",
+    "password": "$2b$10$AK7T/yqonH1Gmj33H5y7kuzXxqJ0KwALcd9YhQOyi3Oba/l0IHE3G"
+  },
+  {
+    "email": "hello",
+    "password": "$2b$10$vKGCLYL/UqXMtUOc64p3leESHFdy8DwoqY23es5I.nTSMly6mEGpi"
+  },
+  {
+    "email": "99",
+    "password": "$2b$10$A57rIdomDxxJ9qx7q9nfBeHB6HsyEFBVpm.wrZzTH1FSZyS/IUthO"
+  },
+  {
+    "email": "AA",
+    "password": "$2b$10$Yqkqzw1VTf5uuxnHnzXQuuUrA8/IozhgwGrqiHo8OgHt7mRcDDrC6"
+  },
+  {
+    "email": "elin@idhieji.com",
+    "password": "$2b$10$Fi/wAo8j.Sbum.e6oE1AceGGXNIfBIQb6TQH4498ZsLCLQdDN.qvG"
+  },
+  {
+    "customerId": "cus_PtNLCIkIifoBXz",
+    "email": "Alinde@gmail.com",
+    "password": "$2b$10$BU2TmTEJRwGDtoVBlH42S.egIk2PfAwWq1mBZ5LOSrv7O398tAzLa"
+  },
+  {
+    "customerId": "cus_PtNUl056j47UNm",
+    "email": "Elin@12.com",
+    "password": "$2b$10$nWFK6ZXOW3EEKB.QazaN9eR2Q1NxLlozzUxfSzlpPDBesWUj/nR/6"
+  },
+  {
+    "customerId": "cus_PtNV1S488jBiSD",
+    "email": "elin@elin.com",
+    "password": "$2b$10$xTElI2erCovrJQdhskaVPuEZXOF7BizCBA3QPbkeIuFl10v0rYXW2"
+  },
+  {
+    "customerId": "cus_PtNsCxIamyxmef",
+    "email": "a@a.a",
+    "password": "$2b$10$TFFS7gIN0JETKnoRb3tZm.lwy5HAmbgqVXEp2KxZ6MJfgDQLnxlMO"
+  },
+  {
+    "customerId": "cus_PtSOdNYXpwTSOr",
+    "email": "3@3.3",
+    "password": "$2b$10$1542YCPzmmT0x3rQYtmcPObVpqe8B0K93rbtq96esCLSptOrQtCFK"
+  },
+  {
+    "customerId": "cus_PthAK0yZCfT7IW",
+    "email": "8@8.8",
+    "password": "$2b$10$x4RJmcsusJV.0L5pn1hYqetgPPJYDFgKel4NmQqXMY8TeT2i2mv1C"
   }
 ]
