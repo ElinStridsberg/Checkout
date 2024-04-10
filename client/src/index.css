@@ -1,126 +1,248 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(242, 242, 236);
+  
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
 
 }
 
-.startPage{
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  min-height: 500px;
+}
+.headingContent{
+
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.heading{
+  font-family: "Syncopate", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.logo{
+  height: 100px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.startPage {
   text-align: center;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .registerContainer, .loginContainer {
-  
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
 }
 
-.registerForm, .loginForm{
-display: flex;
-flex-direction: column;
-align-items: center;
-
-input{
-  margin-top: 10px;
-  width: 200px;
-  border-radius: 10px;
-  padding: 5px;
-}
-button{
- width: 150px;
- align-self: center;
- padding: 5px;
- margin-top: 20px;
- background-color: #535bf2;
-  
-}
-}
-
-
-.loginForm{
-}
-
-.loggedInAs{
-  display: flex;
-  
-}
-/* .startPageBtns{
-  margin-top: 600px;
-  
-  button {
-    background-color: #dbdbdb;
-    margin: 10px;
-
-  }
-} */
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+.registerForm, .loginForm {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  input {
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 5px;
   }
-  a:hover {
-    color: #747bff;
-  }
+
   button {
-    background-color: #f9f9f9;
+    width: 150px;
+    align-self: center;
+    padding: 5px;
+    margin-top: 20px;
   }
+}
+
+.loggedInAs {
+  /* background-color: rgb(242, 242, 236); */
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* Separerar innehållet på båda sidor */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  text-align: left; /* Texten till vänster */
+  margin-top: 30px;
+  font-size: larger;
+}
+.customerName{
+  background-color: rgb(242, 242, 236);
+}
+.loggedInAs span {
+  margin-right: auto; /* Texten till vänster */
+}
+
+.loggedInAs button {
+  width: 70px;
+  padding: 4px;
+}
+
+
+h1{
+  margin-bottom: 50px;
+  margin-top: 80px;
+  text-align: center;
+}
+.ProductContent{
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 7px;
+  width: 50%;
+  justify-content: center; 
+  align-content: center;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  
+}
+
+.ProductList ul {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: center;
+  align-content: center; 
+}
+
+.ProductList li{
+  background-color: white;
+}
+
+.Buy{
+ 
+  width: 80px;
+  margin: 20px;
+ 
+  /* margin-top: 0px; */
+}
+
+.list{
+  background-color: white;
+
+  padding: 20px;
+  position: relative;
+  list-style-type: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px;
+  margin-bottom: 30px;
+
+} 
+
+.list h5, p{
+  background-color: white;
+}
+.list button {
+  margin: 4px;
+  padding: 4px;
+}
+
+.ProductName {
+  /* background-color: white; */
+
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
+}
+
+.ProductList p{
+  /* background-color: white; */
+
+  font-size: 10px;
+  text-align: left;
+}
+
+.ProductImg {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100px;
+  align-self: center;
+}
+
+
+.addToCart{
+  width: 150px;
+  align-self: center;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 5rem
+}
+
+.header {
+  width: 90%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centrerar innehållet vertikalt */
+  padding: 0.5rem 5rem;
+}
+
+.cart {
+  display: flex; 
+}
+
+.cart a{
+  color: rgb(62, 62, 62);
+  position: absolute;
+  top: 40px;
+  right: 370px;
+}
+
+.cart svg {
+  font-size: 40px;
+}
+
+.cart p {
+  position: absolute;
+  right: -10000px;
+  top: -2px;
+  background-color: rgb(16, 16, 16);
+  color: white;
+  height: 1rem;
+  width: 1rem;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
