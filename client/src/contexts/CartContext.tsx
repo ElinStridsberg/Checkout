@@ -6,6 +6,7 @@ export interface Product {
     description: string,
     images: string[],  
     default_price: {
+        id: string,
         unit_amount: number
     }
 }
@@ -48,8 +49,22 @@ const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
                     item.product.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
                 )
             );
-        } else {
-            setCart([...cart, { product, quantity: 1 }]);
+         } else {
+            // Create a new CartItem with only necessary properties
+            const newCartItem: CartItem = {
+                product: {
+                    id: product.id,
+                    name: product.name,
+                    description: product.description,
+                    images: product.images,
+                    default_price: {
+                        id: product.default_price.id,
+                        unit_amount: product.default_price.unit_amount
+                    }
+                },
+                quantity: 1
+            };
+            setCart([...cart, newCartItem]);
         }
     };
 

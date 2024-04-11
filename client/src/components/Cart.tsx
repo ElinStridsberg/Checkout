@@ -24,6 +24,7 @@ export const CartPage = () => {
         }
     }, []);  // Tom beroende-array för att undvika oändlig loop
 
+
     return (
         <div>
             <h2>Varukorg</h2>
@@ -36,7 +37,7 @@ export const CartPage = () => {
                         <div>
                      <img src={cartItem.product.images} className='cartImg'/>
                       <h6>{cartItem.product.name}</h6>  
-                      Pris: {cartItem.product.default_price.unit_amount} st.
+                      Pris: {cartItem.product.default_price.unit_amount/100} SEK.
                       <p>Antal: {cartItem.quantity} st.</p> 
                        </div> {/* Visa produktens pris multiplicerat med antal */}
                     </li>
