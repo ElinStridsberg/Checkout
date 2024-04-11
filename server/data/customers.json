@@ -108,5 +108,15 @@
     "customerId": "cus_PthAK0yZCfT7IW",
     "email": "8@8.8",
     "password": "$2b$10$x4RJmcsusJV.0L5pn1hYqetgPPJYDFgKel4NmQqXMY8TeT2i2mv1C"
+  },
+  {
+    "customerId": "cus_PuAPTkqFXWR37d",
+    "email": "doesitwork@yes.se",
+    "password": "$2b$10$ni2vnuZhh3kE3Fc0qIBR5.qXuxLFGWTj3ptOHd0VzN.x9rv4iRBV6"
+  },
+  {
+    "customerId": "cus_PuAp52ah2l14Mi",
+    "email": "hejjsan@hh.se",
+    "password": "$2b$10$h5Do1J/yrABlfYpodGFVBuY6AaH9iPjpcqurkerG6yKsuhLxaB.nW"
   }
 ]

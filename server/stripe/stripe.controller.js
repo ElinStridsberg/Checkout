@@ -10,10 +10,10 @@ const createCheckoutSession = async (req, res) => {
         const session = await stripe.checkout.sessions.create({
             customer: req.session.customer.customerId,
             mode: "payment",
-            line_items: cart.map(item => {
+            line_items: cart.map(checkoutItem => {
                 return {
-                    price: item.product,
-                    quantity: item.quantity
+                    price: checkoutItem.product.default_price.id,
+                    quantity: checkoutItem.quantity
                 };
             }),
             success_url: "http://localhost:5173/confirmation",
