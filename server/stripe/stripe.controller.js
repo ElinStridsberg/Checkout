@@ -62,11 +62,11 @@ const verifySession = async (req, res) => {
 
             res.status(200).json({ verified: true });
         } else {
-            res.status(400).json({ error: "Payment is not completed." });
+            res.status(400).json({ error: "Betalning ej slutförd." });
         }
     } catch (error) {
-        console.error("Error verifying session:", error);
-        res.status(500).json({ error: "Failed to verify session." });
+        console.error("Fel uppstod vid verifiering av sessionen:", error);
+        res.status(500).json({ error: "Misslyckades med att verifiera sessionen." });
     }
 };
 

@@ -10,7 +10,6 @@ export const Payment = () => {
                "Content-Type": "application/json"
            },
 
-//här skicka in vår kundvagn. Data från vår kundvagn ska skickas till vår backend. Ex en lista på cartitems . Här kan man ha ett object {} med ex id, namn osv
            body: JSON.stringify(checkoutItem
            )
        })

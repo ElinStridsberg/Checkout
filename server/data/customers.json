@@ -118,5 +118,30 @@
     "customerId": "cus_PuAp52ah2l14Mi",
     "email": "hejjsan@hh.se",
     "password": "$2b$10$h5Do1J/yrABlfYpodGFVBuY6AaH9iPjpcqurkerG6yKsuhLxaB.nW"
+  },
+  {
+    "customerId": "cus_PuRT8MAx9anDnq",
+    "email": "imadone@yes.si",
+    "password": "$2b$10$yE4hQUsD6EWCUqo.USRg4eMIgefhMDLKawRiSRBMYTU5cUXNyOQk2"
+  },
+  {
+    "customerId": "cus_PuRXE71xQP7awK",
+    "email": "hej@hej.hej",
+    "password": "$2b$10$uQWermz1yUdHLXYdqtONKurYnF.0E0AFBUD92Mi6Xum5iKe498aBy"
+  },
+  {
+    "customerId": "cus_PuRaaZXE3a0hLK",
+    "email": "1@b.c",
+    "password": "$2b$10$hOxdxqOMiW7cKOQBNkVG7uNU1gQW95X8sYuYpucNltZjnFdJ2IMT."
+  },
+  {
+    "customerId": "cus_PuRh5rztXh5Gsy",
+    "email": "olle@olle.olle",
+    "password": "$2b$10$7OAhCwXXo4FtznIr/1rIDusck5yPjDNJVPAXh/5vfRruaz7CapI56"
+  },
+  {
+    "customerId": "cus_PuRtLOBrmy85Ym",
+    "email": "fanny@fanny.se",
+    "password": "$2b$10$QshqFQEf7vwDYd8SKSKCtuObDZkLeAPibndrlo0PLlnP.rPCcpRVC"
   }
 ]

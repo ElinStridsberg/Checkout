@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Product, useCart } from "../contexts/CartContext"
 import Header from '../pages/Header';
-import { Payment } from './Payment';
 
 const ProductList = () => {
     const [products, setProducts] = useState<Product[]>()

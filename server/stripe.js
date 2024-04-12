@@ -1,5 +1,3 @@
-// tar ut stripe så att vi kan använda denna instans överallt för att slippa ta in stripe i varje fil. Som ett context.
-
 const Stripe = require("stripe")
 
 const initStripe = () => {

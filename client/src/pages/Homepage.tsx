@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Payment } from './Payment';
+import { useEffect, useState } from 'react';
 import ProductList from './ProductList';
-import Header from './Header';
+
 
 export const Homepage = () => {
     const [email, setEmail] = useState<string>("");
@@ -37,6 +36,8 @@ export const Homepage = () => {
         const data = await response.json();
         setIsRegistered(true);
         setShowForm("none");
+
+        
     };
 
     const handleLogin = async () => {
@@ -51,7 +52,7 @@ export const Homepage = () => {
         const data = await response.json();
 
         if (response.status === 400) {
-            setErrorMessage("Wrong email or password");
+            setErrorMessage("Fel email eller lösenord");
             return;
         }
 
@@ -68,7 +69,7 @@ export const Homepage = () => {
         });
         if (response.status === 200) {
             setIsLoggedIn(false);
-            setShowForm("none"); // Återställer till ursprungliga värden
+            setShowForm("none"); 
             setEmail("");
         }
     };
@@ -93,6 +94,9 @@ export const Homepage = () => {
                     </div>
                 </div>
                 </>
+            )}
+    {isRegistered && (
+                <p>Registrering slutförd. Vänligen logga in!</p>
             )}
 
             {showForm === "register" && (
