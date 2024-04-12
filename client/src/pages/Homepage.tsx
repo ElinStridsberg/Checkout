@@ -118,7 +118,7 @@ export const Homepage = () => {
                     <div className='RegisterNewCustomer'>
                     <input className='email' type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     <input className='password'type="password" placeholder="Lösenord" onChange={(e) => setPassword(e.target.value)} />
-                    <button onClick={handleRegister}>Registrera</button>
+                    <button className='handleRegister'onClick={handleRegister}>Registrera</button>
                     </div>
                 </div>
                 </>
