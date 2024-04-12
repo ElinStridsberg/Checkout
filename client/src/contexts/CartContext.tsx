@@ -40,7 +40,7 @@ const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
     }, [cart])
 
     const addToCart = (product: Product) => {
-        console.log('Added to cart:', product.name); // Loggar den valda produkten
+        console.log('Added to cart:', product.name); 
         const productAlreadyExists = cart.find(item => item.product.id === product.id);
     
         if (productAlreadyExists) {
@@ -50,7 +50,6 @@ const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
                 )
             );
          } else {
-            // Create a new CartItem with only necessary properties
             const newCartItem: CartItem = {
                 product: {
                     id: product.id,

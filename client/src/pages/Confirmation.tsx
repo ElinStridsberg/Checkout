@@ -29,12 +29,12 @@ export const Confirmation = () => {
                     setVerified(data.verified);
                     setIsLoading(false);
                 } else {
-                    setError("Failed to verify session.");
+                    setError("Misslyckades med att verifiera sessionen.");
                     setIsLoading(false);
                 }
             } catch (err) {
-                console.error("Error verifying session:", err);
-                setError("An error occurred while verifying session.");
+                console.error("Fel vid verifiering av sessionen:", err);
+                setError("Ett error uppkom vid verifiering av sessionen");
                 setIsLoading(false);
             }
         };
@@ -45,7 +45,7 @@ export const Confirmation = () => {
     }, [verified]);
 
     if (isLoading) {
-        return <h3>Loading...</h3>;
+        return <h3>Laddar...</h3>;
     }
 
     if (error) {
@@ -54,7 +54,7 @@ export const Confirmation = () => {
 
     return (
         <div>
-            <h3>{verified ? "TACK FÖR DITT KÖP ✅" : "Could not verify purchase."}</h3>
+            <h3>{verified ? "TACK FÖR DITT KÖP ✅" : "Kunde inte slutföra betalningen."}</h3>
         </div>
     );
 };

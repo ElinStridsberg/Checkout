@@ -118,5 +118,60 @@
     "customerId": "cus_PuAp52ah2l14Mi",
     "email": "hejjsan@hh.se",
     "password": "$2b$10$h5Do1J/yrABlfYpodGFVBuY6AaH9iPjpcqurkerG6yKsuhLxaB.nW"
+  },
+  {
+    "customerId": "cus_PuRT8MAx9anDnq",
+    "email": "imadone@yes.si",
+    "password": "$2b$10$yE4hQUsD6EWCUqo.USRg4eMIgefhMDLKawRiSRBMYTU5cUXNyOQk2"
+  },
+  {
+    "customerId": "cus_PuRXE71xQP7awK",
+    "email": "hej@hej.hej",
+    "password": "$2b$10$uQWermz1yUdHLXYdqtONKurYnF.0E0AFBUD92Mi6Xum5iKe498aBy"
+  },
+  {
+    "customerId": "cus_PuRaaZXE3a0hLK",
+    "email": "1@b.c",
+    "password": "$2b$10$hOxdxqOMiW7cKOQBNkVG7uNU1gQW95X8sYuYpucNltZjnFdJ2IMT."
+  },
+  {
+    "customerId": "cus_PuRh5rztXh5Gsy",
+    "email": "olle@olle.olle",
+    "password": "$2b$10$7OAhCwXXo4FtznIr/1rIDusck5yPjDNJVPAXh/5vfRruaz7CapI56"
+  },
+  {
+    "customerId": "cus_PuRtLOBrmy85Ym",
+    "email": "fanny@fanny.se",
+    "password": "$2b$10$QshqFQEf7vwDYd8SKSKCtuObDZkLeAPibndrlo0PLlnP.rPCcpRVC"
+  },
+  {
+    "customerId": "cus_PuSDBdz4jtANA8",
+    "email": "h@h.h",
+    "password": "$2b$10$VUVpg1g38dmGMWHfX8WNFOsK1sLT/aCkiTzhJBXnamvrgsgkIVyIu"
+  },
+  {
+    "customerId": "cus_PuSE9nb9chUG43",
+    "email": "0@0.0",
+    "password": "$2b$10$kXa2QWMccwsG190J6crsE.jvWnT5DYhBtS74S6yDIOynjM2BH2IlW"
+  },
+  {
+    "customerId": "cus_PuSFzvx9U7W5s0",
+    "email": "g@g.g",
+    "password": "$2b$10$PGudGiBCjEX6RgWbD.a5PO1k7dWljAxxeQn0yD94qcsrl.rUY1YtC"
+  },
+  {
+    "customerId": "cus_PuVEW71VcYUfc8",
+    "email": "bajs@bajs.bajs",
+    "password": "$2b$10$iVG3Euo70G9VOEr7Exg9c.j56goHxvjIQeasJC98VNe0nZ.4NafFi"
+  },
+  {
+    "customerId": "cus_PuVNWDUOxu9MGE",
+    "email": "",
+    "password": "$2b$10$OMtSCp1Qr8WBF5d0ehMttuOYp/elCMthMg3CtMPpCWsUIviZkLRT2"
+  },
+  {
+    "customerId": "cus_PuVQxpQP5UBi1n",
+    "email": "test@test.test",
+    "password": "$2b$10$QEU5CIIKshIKjQHoWcMwEuzzuQ0Yz6uuXp0nb6RO6IISk.bQhCqly"
   }
 ]
