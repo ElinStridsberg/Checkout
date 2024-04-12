@@ -56,12 +56,11 @@ body {
   text-align: center;
   margin-top: 50px;
   display: flex;
-  flex-direction: ;
+  
   align-items: center;
 }
 
 .registerContainer{
-
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -72,6 +71,10 @@ body {
     margin-bottom: 0;
    }
 
+}
+
+.RegisterNewCustomer{
+  display: flex;
 }
 .new {
   margin-bottom: 70px;
