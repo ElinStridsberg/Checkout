@@ -11,7 +11,6 @@ export const Header = () => {
                 <Link to="/cart">
                     <BsCart2 />
                 </Link>
-                <p>{cart.length}</p>
             </div>
         </div>
     );

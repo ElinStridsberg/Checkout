@@ -27,39 +27,69 @@ body {
   width: 60%;
   min-height: 500px;
 }
-.headingContent{
-
-  display: flex;
-  margin-bottom: 0px;
+.LogoHeading{
+  width: 130%;
+  border-radius: 5px;
+  margin-top: -100px;
+  margin-bottom: 100px;
 }
 
-.heading{
-  font-family: "Syncopate", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 50px;
+.login{
+  width: 300px;
+  margin-bottom: 10px;
 }
 
-.logo{
-  height: 100px;
+.Heading {
   margin-top: 50px;
-  margin-left: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center; 
 }
+
+.Logo {
+  width: 50%;
+}
+
 .startPage {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
-  flex-direction: column;
+  
   align-items: center;
 }
 
-.registerContainer, .loginContainer {
+.registerContainer{
+  width: 300px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  align-items: center;
+  align-content: end;
+   gap: 20px;
+   p{
+    margin-bottom: 0;
+   }
+
 }
 
-.registerForm, .loginForm {
+.RegisterNewCustomer{
+  display: flex;
+}
+.new {
+  margin-bottom: 70px;
+  
+}
+.email, .password{
+  margin-right: 20px;
+  margin-top: 10px;
+  width: 200px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+
+ .loginForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,21 +110,30 @@ body {
 }
 
 .loggedInAs {
-  /* background-color: rgb(242, 242, 236); */
-  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
   display: flex;
   width: 100%;
-  justify-content: space-between; /* Separerar innehållet på båda sidor */
-  align-items: center; /* Centrerar innehållet vertikalt */
-  text-align: left; /* Texten till vänster */
-  margin-top: 30px;
+  justify-content: space-between; 
+  align-items: center;
+  text-align: left; 
   font-size: larger;
+  margin-top: 10px;
+ 
 }
-.customerName{
-  background-color: rgb(242, 242, 236);
+
+
+
+.loggedInAs p {
+  background-color: #fff;
 }
+
 .loggedInAs span {
-  margin-right: auto; /* Texten till vänster */
+  margin-right: auto; 
 }
 
 .loggedInAs button {
@@ -137,17 +176,16 @@ h1{
   background-color: white;
 }
 
+.price{
+  background-color: white;
+}
 .Buy{
- 
   width: 80px;
   margin: 20px;
- 
-  /* margin-top: 0px; */
 }
 
 .list{
   background-color: white;
-
   padding: 20px;
   position: relative;
   list-style-type: none;
@@ -159,7 +197,6 @@ h1{
   align-items: center; 
   padding: 20px;
   margin-bottom: 30px;
-
 } 
 
 .list h5, p{
@@ -171,16 +208,12 @@ h1{
 }
 
 .ProductName {
-  /* background-color: white; */
-
   font-size: large;
   font-weight: bold;
   text-align: left;
 }
 
 .ProductList p{
-  /* background-color: white; */
-
   font-size: 10px;
   text-align: left;
 }
@@ -200,23 +233,6 @@ h1{
   margin-top: 20px;
 }
 
-.header {
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 5rem
-}
-
-.header {
-  width: 90%;
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Centrerar innehållet vertikalt */
-  padding: 0.5rem 5rem;
-}
-
 .cart {
   display: flex; 
 }
@@ -224,25 +240,54 @@ h1{
 .cart a{
   color: rgb(62, 62, 62);
   position: absolute;
-  top: 40px;
-  right: 370px;
+  top: 30px;
+  right:290px;
+  background-color: #fff;
 }
 
 .cart svg {
   font-size: 40px;
+  background-color: #fff;
 }
 
-.cart p {
-  position: absolute;
-  right: -10000px;
-  top: -2px;
-  background-color: rgb(16, 16, 16);
-  color: white;
-  height: 1rem;
-  width: 1rem;
-  padding: 10px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.loggedInAs button{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  margin-left: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  width: 100px;
+  color: #fff; 
+  background-color: #ee8fab; 
+}
+
+
+.loggedInAs button:hover {
+  background-color: #c36380;
+}
+
+button {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  color: #fff; 
+  background-color: #ee8fab; 
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+button:hover {
+  background-color: #c36380;
 }
