@@ -1,16 +1,26 @@
 
 h2{
+    margin-top: 50px;
     text-align: center;
-    margin-top: 100px;
     margin-bottom: 0px;
+    background-color: rgb(242, 242, 236);
 }
+
 hr {
     border: none; /* Tar bort den inbyggda kanten */
     height: 1px; /* Bestämmer höjden på linjen */
     background-color: #ccc; /* Färg på linjen */
     margin: 20px 0; /* Margin över och under linjen */
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+.cartContent {
+    background-color: rgb(242, 242, 236);
 }
 
+.cartItems{
+    background-color: rgb(242, 242, 236);
+}
 .cartImg {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -19,31 +29,31 @@ hr {
 }
 
 ul {
+    background-color: rgb(242, 242, 236);
     list-style-type: none;
     display: flex;
-    flex-direction: column; /* Ändra flex-direction till row */
-   /* Centrera elementen vertikalt */
+    flex-direction: column; 
 }
 
 li {
+    background-color: rgb(242, 242, 236);
     display: flex; /* Använd flex på varje list-item */
     align-items: flex-start; /* Centrera elementen vertikalt */
     margin-bottom: 10px;  padding: 10px;
     position: relative;
     list-style-type: none;
-    border: 1px solid rgb(232, 231, 231);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-
     flex-direction: column;
     justify-content: space-between; /* Placerar knappen längst ner */
-    /* Centrerar knappen horisontellt *//* Lite mellanrum mellan varje list-item */
 }
-
+li h6, p{
+    background-color: rgb(242, 242, 236);
+}
 li img {
+    
     margin-right: 10px; /* Lite mellanrum mellan bilden och texten */
     flex-shrink: 0; /* Förhindra att bilden krymper */
 }
+
 
 .pay {
     width: 200px;
@@ -51,7 +61,6 @@ li img {
     margin: 0 auto;
     justify-content: center; /* Centrerar innehållet horisontellt */
     align-items: center; /* Centrerar innehållet vertikalt */
- 
     margin-top: 30px;
     margin-bottom: 50px;
   }

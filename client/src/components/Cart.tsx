@@ -23,25 +23,25 @@ export const CartPage = () => {
 
 
     return (
-        <div>
+        <div className='cartContent'>
             <h2>Varukorg</h2>
             <hr className='hr'></hr>
        
-            <div>
+            <div className='cartItems'>
             <ul>
                 {cart && cart.map((cartItem, index) => (
                     <li key={index}>
-                        <div>
+                        
                      <img src={cartItem.product.images} className='cartImg'/>
                       <h6>{cartItem.product.name}</h6>  
                       Pris: {cartItem.product.default_price.unit_amount/100} SEK.
                       <p>Antal: {cartItem.quantity} st.</p> 
-                       </div> 
                     </li>
                 ))}
-            </ul></div>
-           <Payment />
-           </div>
+            </ul>
+            </div>
+                <Payment />
+         </div>
      
     );
 };

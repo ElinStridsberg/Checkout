@@ -19,13 +19,17 @@ const ProductList = () => {
     return (
         <>
         <Header />
+        <div className='Heading'>
+            
      
+        </div>
+
             <div className='ProductContent'>
                 {products?.map((product: Product) => (
                     <div key={product.id} className='list'>
                         <img src={product.images} className='ProductImg'/>
                         <h5>{product.name}</h5>
-                        <p>{product.default_price.unit_amount / 100} kr</p>
+                        <p className='price'>{product.default_price.unit_amount / 100} kr</p>
                         <button onClick={() => addToCart(product)} className='Buy'>Köp</button>
                     </div>
                 ))}
