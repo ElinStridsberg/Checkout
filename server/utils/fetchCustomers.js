@@ -8,3 +8,5 @@ const fetchCustomers = async () => {
 }
 
 module.exports = fetchCustomers
+
+//inte hämtat

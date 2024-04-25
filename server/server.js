@@ -11,7 +11,7 @@ const authRouter = require("./resources/auth/auth.router")
 
 const stripeRouter = require("./stripe/stripe.router")
 
-
+//INTE HÄMTAT
 const { fetchProducts } = require("./stripe/stripe.controller")
 const app = express()
 
